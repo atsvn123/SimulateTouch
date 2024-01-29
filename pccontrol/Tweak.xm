@@ -7,6 +7,7 @@
 #include <sys/xattr.h>
 #include <substrate.h>
 #include <math.h>
+#include <dlfcn.h>
 
 #include <mach/mach.h>
 #import <CoreGraphics/CoreGraphics.h>
@@ -39,6 +40,7 @@
 #include "Play.h"
 #include "TouchIndicator/TouchIndicatorWindow.h"
 #include "Activator/ActivatorListener.h"
+//#import <opencv2/core/utility.hpp>
 
 
 #define DEBUG_MODE
@@ -65,7 +67,7 @@ int daemonSock = -1;
 
 
 typedef struct　eventInfo_s* eventInfo;
-typedef struct Node* llNodePtr;
+//typedef struct Node* llNodePtr;
 typedef struct eventData_s* eventDataPtr;
 
 
@@ -82,7 +84,7 @@ const NSString *recordingScriptName = @"rec";
 eventInfo touchEventArr[TOUCH_EVENT_ARR_LEN] = {0};
 
 
-llNodePtr eventLinkedListHead = NULL;
+//llNodePtr eventLinkedListHead = NULL;
 
 
 Boolean isInitializedSuccess = true;
@@ -361,7 +363,7 @@ Boolean init()
         //NSLog(@"com.zjx.springboard: Visit %@ in your web browser", _webServer.serverURL);
 
         //system("sudo zxtouchb -e \"chown -R mobile:mobile /var/mobile/Documents/com.zjx.zxtouchsp\"");
-        system("sudo zxtouchb -e \"chown -R mobile:mobile /var/mobile/Library/ZXTouch\"");
+        //system("sudo zxtouchb -e \"chown -R mobile:mobile /var/mobile/Library/ZXTouch\"");
 
         socketServer();
     });

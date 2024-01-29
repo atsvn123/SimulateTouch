@@ -20,8 +20,12 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreMedia/CoreMedia.h>
+#import <opencv2/opencv.hpp>
+#import <opencv2/imgproc.hpp>
+#import <opencv2/highgui.hpp>
+#import <opencv2/core/operations.hpp>
 #import <opencv2/imgcodecs/ios.h>
-
+using namespace cv;
 @interface TemplateMatch : NSObject
 
 @property(nonatomic,strong) UIImage *templateImage;     //模板图片。由于匹配方法会被多次调用，所以模板图片适合单次设定。
@@ -31,6 +35,7 @@
 - (CGRect)templateMatchWithPath:(NSString*)imgPath templatePath:(NSString*)templatePath error:(NSError**)err;
 - (CGRect)templateMatchWithUIImage:(UIImage*)img template:(UIImage*)templ;
 - (CGRect)templateMatchWithCGImage:(CGImageRef)img templatePath:(NSString*)templatePath error:(NSError**)err;
+- (CGRect)matchWithMat:(Mat)img andTemplate:(Mat)templ;
 
 - (void)setScaleRation:(float)sr;
 - (void)setAcceptableValue:(float)av;
