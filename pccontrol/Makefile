@@ -10,7 +10,7 @@ pccontrol_FRAMEWORKS = UIKit opencv2 AssetsLibrary AVFoundation CoreMedia CoreVi
 #pccontrol_LDFLAGS += -L./libs/IOMobileFramebuffer.framework/IOMobileFramebuffer
 # link libjpeg.a
 #pccontrol_LDFLAGS += -L./libjpeg.a
-pccontrol_ARCHS =  arm64 arm64e
+pccontrol_ARCHS =  arm64
 #pccontrol_CCFLAGS = -std=c++11
 #使用3.1.0版本编译错误只有一个
 pccontrol_PRIVATE_FRAMEWORKS = IOKit
