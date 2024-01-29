@@ -21,9 +21,6 @@
 #import <UIKit/UIKit.h>
 #import <CoreMedia/CoreMedia.h>
 #import <opencv2/opencv.hpp>
-#import <opencv2/imgproc.hpp>
-#import <opencv2/highgui.hpp>
-#import <opencv2/core/operations.hpp>
 #import <opencv2/imgcodecs/ios.h>
 using namespace cv;
 @interface TemplateMatch : NSObject
