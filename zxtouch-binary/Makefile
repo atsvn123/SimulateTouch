@@ -2,8 +2,8 @@
 TARGET := iphone:clang:latest:14.5
 include $(THEOS)/makefiles/common.mk
 
+zxtouchb_ARCH = arm64 arm64e
 TOOL_NAME = zxtouchb
-zxtouchb_ARCH = arm64
 
 zxtouchb_FILES = main.mm
 zxtouchb_FRAMEWORKS = CoreFoundation UIKit CoreGraphics
