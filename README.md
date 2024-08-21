@@ -1,5 +1,24 @@
 # IOS13-SimulateTouch V0.0.6
 
+## opencv编译指南
+git克隆项目
+```shell
+git clone https://github.com/opencv/opencv
+```
+切换版本
+```shell
+git checkout 4.x
+```
+创建build目录
+```shell
+cd opencv && mkdir build
+```
+开始编译
+```shell
+#请使用python3版本进行编译,可使用pyenv进行python版本切换
+python ../platforms/ios/build_framework.py ios --iphoneos_archs "arm64,arm64e" --iphoneos_deployment_target "11.0" --disable-bitcode --dynamic  --build_only_specified_archs
+```
+
 A **system wide** touch event simulation library for iOS 11.0 - 14.
 
 Jailbroken device required. Application wide touch simulation library: [PTFakeTouch](https://github.com/Ret70/PTFakeTouch). Choose as you like:)
