@@ -10,7 +10,6 @@ pccontrol_CFLAGS = -Wno-error -Wno-module-import-in-extern-c -fobjc-arc
 pccontrol_FRAMEWORKS = UIKit AssetsLibrary AVFoundation CoreMedia CoreVideo IOSurface
 pccontrol_EXTRA_FRAMEWORKS = opencv2
 #pccontrol_LDFLAGS += -L./libjpeg.a
-pccontrol_ARCHS =  arm64e
 pccontrol_CCFLAGS = -std=c++11
 #使用opencv 4.x
 pccontrol_PRIVATE_FRAMEWORKS = IOKit
